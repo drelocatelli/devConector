@@ -10,7 +10,7 @@ function App() {
           Create a developer profile/portfolio, <br />
           Share posts and get help from other developers, <br />
           Show your github repos,
-          <br /> and more;
+          <br /> and more.
         </p>
       </div>
     </>
