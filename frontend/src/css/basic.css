@@ -1,3 +1,123 @@
-html {
-    background:#f9f9f9;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(0, 119, 255);
+}
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    padding:0;
+    margin:0;
+    background: #f9f9f9;
+}
+
+.container{
+    font-size: 20px;
+    margin:15vh auto;
+    width:80%;
+    background:#fff;
+    padding: 10px 20px;
+}
+
+nav {
+    background: #333;
+}
+
+nav li {
+    list-style: none;
+    display:inline;
+    margin: 0;
+}
+
+nav ul {
+    display:inline;
+    float:right;
+    margin:0;
+}
+
+nav li a {
+    color:#fff;
+    font-size:16px;
+    text-decoration: none;
+    display:inline-block;
+    padding:15px;
+}
+
+nav ul li a:hover{
+    text-decoration: underline;
+}
+
+nav li a.brand{
+    font-size:20px;
+}
+
+nav li a.brand:hover{
+    text-decoration: none;
+}
+
+input, button {
+    outline:none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button.primary {
+    background: rgb(34, 105, 197);
+    color:#fff;
+    border:0;
+    font-size:20px;
+    padding: 10px 25px;
+    transition: opacity 0.2s;
+    border-radius: 5px;
+}
+
+button.primary:hover {
+    opacity: 0.9;
+}
+
+input {
+    width:-webkit-fill-available;
+    border: 1px solid #ccc;
+    font-size:24px;
+    padding:2px 4px;
+    margin-bottom: 5px;
+}
+
+.alert {
+    display:block;
+    background: rgb(226, 95, 95);
+    color:#fff;
+    border-radius:5px;
+    border:1px solid red;
+    user-select: none;
+    padding: 5px 15px;
+    margin:10px 0;
+    opacity:0.8;
+    transition:opacity 0.2s;
+}
+
+.alert-info {
+    display:block;
+    background: rgb(95, 226, 106);
+    color:#fff;
+    border-radius:5px;
+    border:1px solid rgb(0, 255, 0);
+    user-select: none;
+    padding: 5px 15px;
+    margin:10px 0;
+    opacity:0.8;
+    transition:opacity 0.2s;
+}
+
+.alert:hover, .alert-info:hover {
+    opacity:1;
 }
