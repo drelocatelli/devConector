@@ -1,3 +1,3 @@
 # devConector
 
-![image](https://user-images.githubusercontent.com/32282846/142959558-d1dea14d-2ead-4aa8-9b24-e73cce350ea7.png)
+![image](https://user-images.githubusercontent.com/32282846/142961406-97caece0-6124-4f82-af6c-e49f828eb535.png)
