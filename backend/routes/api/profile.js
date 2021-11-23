@@ -146,6 +146,36 @@ router.delete('/', auth, async (req, res) => {
     }
 });
 
+//! @route   PUT api/profile/visibility
+// @desc    Test route
+// @access  Private
+router.put('/visibility', [auth, [
+    check('visibility', 'Visibility is required').not().isEmpty(),
+]], async (req, res) => {
+
+    const errors = validationResult(req);
+    if(!errors.isEmpty) {
+        return res.status(400).json({errors: errors.array()});
+    }
+
+    const { visibility } = req.body;
+
+    const newExp = {visibility};
+
+    try{
+        const profile = await Profile.findOne({user: req.user.id});
+        // add new exp to init 
+        profile.visibility = visibility;
+        await profile.save();
+        res.json(profile.visibility);
+
+    }catch(err) {
+        console.error(err.message);
+        res.status(500).send('Server error');
+    }
+
+});
+
 
 //! @route   PUT api/profile/experience
 // @desc    Test route

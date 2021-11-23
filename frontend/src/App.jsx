@@ -11,7 +11,7 @@ function App() {
             Show your github repos,
             <br /> and more.
             <br /><br />
-            <a href="/about">Take a tour</a> or <a href="/join">Join now</a>
+            <a href="/tour">Take a tour</a> or <a href="/join">Join now</a>
         </Container>
     </>
   );

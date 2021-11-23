@@ -70,7 +70,8 @@ button {
     cursor: pointer;
 }
 
-button.primary {
+button.primary, .btn-primary {
+    display: block;
     background: rgb(34, 105, 197);
     color:#fff;
     border:0;
@@ -78,6 +79,10 @@ button.primary {
     padding: 10px 25px;
     transition: opacity 0.2s;
     border-radius: 5px;
+}
+
+.btn-primary:hover{
+    text-decoration: none;
 }
 
 button.primary:hover {
@@ -120,4 +125,8 @@ input {
 
 .alert:hover, .alert-info:hover {
     opacity:1;
+}
+
+.profileTopics {
+    padding: 5px 20px;
 }

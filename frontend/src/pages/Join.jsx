@@ -69,10 +69,10 @@ function Join() {
                         <table border={'0'} align={'center'}>
                             <tr>
                                 <td>
-                                    <input type="email" name={'email'} value={email} onChange={e => formChange(e)} placeholder={'Email address'} />
+                                    <input type="email" name={'email'} value={email} onChange={e => formChange(e)} placeholder={'Email address'} required />
                                 </td>
                                 <td>
-                                    <input type="password" name={'password'} value={password} onChange={e => formChange(e)} placeholder={'********'} />
+                                    <input type="password" name={'password'} value={password} onChange={e => formChange(e)} placeholder={'********'} required />
                                 </td>
                             </tr>
                             <tr>
