@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
+
 import NavbarPrimary from '../components/NavbarPrimary';
 import Container from '../components/Container';
 import ApiService from '../Service/ApiService';
 
-function Register() {
-    const [message, setMessage] = useState();
-    const [info, setInfo] = useState();
+import { connect } from 'react-redux';
+import { setAlert } from '../actions/alert';
+import Alert from '../components/Alert';
+
+function Register({ setAlert }) {
 
     const [formData, setFormData] = useState({
             name: '',
@@ -23,9 +27,8 @@ function Register() {
     const submitForm = async (e) => {
         e.preventDefault();
         if(password != password2) {
-            setMessage('Passwords do not match');
+            setAlert('Passwords do not match', 'danger');
         }else {
-            setMessage(null);
             
             try {
                 const newUser = { name, email, password };
@@ -40,15 +43,14 @@ function Register() {
                 const res = await ApiService().post('/users', body, config);
 
                 console.log(res.data);
-                setInfo('Now you can login');
+                setAlert('Now you can login', 'success');
                 
             }catch(err) {
-                setInfo(null);
                 let error = err.response.data.errors[0].msg;
                 if(error) {
-                    setMessage(error);
+                    setAlert(error, 'danger');
                 }else{
-                    setMessage('Server error');
+                    setAlert('Server error', 'danger');
                 }
                 
             }
@@ -62,12 +64,7 @@ function Register() {
     <>
       <NavbarPrimary />
         <Container title={"Register an account"}>
-            {(info) &&
-                <span className="alert-info">{info}</span>
-            }
-            {(message) &&
-                <span className="alert">{message}</span>
-            }
+            <Alert />
             <form onSubmit={(e) => submitForm(e)}>
                 <table border={'0'} width={'80%'} align={'center'}>
                         <tr>
@@ -107,4 +104,8 @@ function Register() {
   );
 }
 
-export default Register;
+Register.propTypes = {
+    setAlert: PropTypes.func.isRequired
+}
+
+export default connect(null, { setAlert })(Register);

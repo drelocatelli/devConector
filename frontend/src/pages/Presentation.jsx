@@ -39,7 +39,7 @@ function Presentation() {
             <Container title={'Devs profile'}>
                 Browse and connect with developers
                 <br /><br />
-                Listing {data.length} profile(s):
+                Listing {data.length} public profile(s):
                 <br /><br />
                 {(data.length >= 1) ?
                     <>

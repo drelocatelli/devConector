@@ -14,8 +14,8 @@ function DevList(props) {
                             {props.status} <br />
                             Lives in {props.location} <br />
                             {props.profile} <br />
-                            <b>Skills:</b> <br />
-                            {props.skills}
+                            <b style={{color:'#03A9F4'}}>Skills:</b> <br />
+                            <span style={{color:'#03A9F4'}}>{props.skills}</span>
                         </div>
                     </td>
                 </tr>
