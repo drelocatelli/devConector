@@ -9,7 +9,7 @@ const Profile = require('../../models/Profile');
 const User = require('../../models/User');
 
 
-// @route   GET api/profile/me
+//! @route   GET api/profile/me
 // @desc    Test route
 // @access  Private
 router.get('/me', auth, async (req, res) => {
@@ -29,7 +29,7 @@ router.get('/me', auth, async (req, res) => {
     }
 });
 
-// @route   POST api/profile
+//! @route   POST api/profile
 // @desc    Test route
 // @access  Private
 router.post('/',[auth, [
@@ -89,7 +89,7 @@ router.post('/',[auth, [
 });
 
 
-// @route   GET api/profile
+//! @route   GET api/profile
 // @desc    Test route
 // @access  Public
 router.get('/', async (req, res) => {
@@ -104,7 +104,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// @route   GET api/profile/user/:user_id
+//! @route   GET api/profile/user/:user_id
 // @desc    Test route
 // @access  Public
 router.get('/user/:user_id', async (req, res) => {
@@ -126,7 +126,7 @@ router.get('/user/:user_id', async (req, res) => {
     }
 });
 
-// @route   DELETE api/profile
+//! @route   DELETE api/profile
 // @desc    Test route
 // @access  Private
 router.delete('/', auth, async (req, res) => {
@@ -147,7 +147,7 @@ router.delete('/', auth, async (req, res) => {
 });
 
 
-// @route   PUT api/profile/experience
+//! @route   PUT api/profile/experience
 // @desc    Test route
 // @access  Private
 router.put('/experience', [auth, [
@@ -179,7 +179,7 @@ router.put('/experience', [auth, [
 
 });
 
-// @route   DELETE api/profile/experience/:exp_id
+//! @route   DELETE api/profile/experience/:exp_id
 // @desc    Test route
 // @access  Private
 router.delete('/experience/:exp_id', auth, async (req, res) => {
@@ -201,7 +201,7 @@ router.delete('/experience/:exp_id', auth, async (req, res) => {
 });
 
 
-// @route   PUT api/profile/education
+//! @route   PUT api/profile/education
 // @desc    Test route
 // @access  Private
 router.put('/education', [auth, [
@@ -234,7 +234,7 @@ router.put('/education', [auth, [
 
 });
 
-// @route   DELETE api/profile/education/:edu_id
+//! @route   DELETE api/profile/education/:edu_id
 // @desc    Test route
 // @access  Private
 router.delete('/education/:edu_id', auth, async (req, res) => {
@@ -255,7 +255,7 @@ router.delete('/education/:edu_id', auth, async (req, res) => {
     }
 });
 
-// @route   GET api/profile/github/:username
+//! @route   GET api/profile/github/:username
 // @desc    Test route
 // @access  Public
 router.get('/github/:username', (req, res) => {
